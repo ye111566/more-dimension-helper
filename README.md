@@ -1,5 +1,35 @@
-开源协议：AGPL-3.0+附加条款
-附加条款：本软件的源代码不得被修改。任何分发行为必须保持源代码的完整性，并附带原始版权声明和许可证文件。
-GNU Affero General Public License v3.0
-本项目需要多维度前置插件
-可以通过在服务器根目录配置config.json来完成配置多维度
+# LeviLamina Mod Template
+
+A LeviLamina mod template
+
+This mod is a template for developing LeviLamina mods.
+
+## Install
+
+Generate a new repository from this template.
+
+## Usage
+
+Before using this mod template, make sure that you have installed XMake and a Minecraft Bedrock Server with LeviLamina.
+
+1. Clone the new repository into a local folder.
+
+1. Change the mod name and the expected LeviLamina version in `xmake.lua`.
+
+1. Add your code.
+
+1. Run `xmake repo -u` in the root of the repository.
+
+1. Run `xmake` to build the mod.
+
+Now the build is complete at `bin/`.
+
+## Contributing
+
+Ask questions by creating an issue.
+
+PRs accepted.
+
+## License
+
+CC0-1.0 © LiteLDev
