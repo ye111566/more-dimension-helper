@@ -1,35 +1,18 @@
-# LeviLamina Mod Template
+More dimension helper
 
-A LeviLamina mod template
 
-This mod is a template for developing LeviLamina mods.
 
 ## Install
-
-Generate a new repository from this template.
+安装前置more dimension
 
 ## Usage
-
-Before using this mod template, make sure that you have installed XMake and a Minecraft Bedrock Server with LeviLamina.
-
-1. Clone the new repository into a local folder.
-
-1. Change the mod name and the expected LeviLamina version in `xmake.lua`.
-
-1. Add your code.
-
-1. Run `xmake repo -u` in the root of the repository.
-
-1. Run `xmake` to build the mod.
-
-Now the build is complete at `bin/`.
-
+使用方法，把压缩包丢服务器根目录 然后解压到当前文件夹
+然后修改根目录下的config.json
+即可完成配置！
 ## Contributing
 
-Ask questions by creating an issue.
+@ye111566
 
 PRs accepted.
 
 ## License
-
-CC0-1.0 © LiteLDev
