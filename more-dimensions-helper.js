@@ -49,7 +49,7 @@ mc.listen('onServerStarted', () => {
                         add.addDropdown("选择维度的生成器类型", ["主世界", "地狱", "末地", "超平坦", "虚空"])
                         add.addInput("维度种子", "请输入维度的种子(必须整数)")
                         player.sendForm(add, (player2, data2, reason2) => {
-                            if (mc.getPlayer(player2.name).isOP) {
+                            if (mc.getPlayer(player2.name).isOP()) {
 
                                 let newdimlist = dimlist.concat({ "name": data2[0], "seed": parseInt(data2[2]), "type": ["Overworld", "Nether", "TheEnd", "Flat", "Void"][data2[1]] })
                                 let dimconfig = new JsonConfigFile(`./config.json`)
@@ -69,7 +69,7 @@ mc.listen('onServerStarted', () => {
                         del.addDropdown("选择要删除的维度入口", dimnamelist)
 
                         player.sendForm(del, (player2, data2, reason2) => {
-                            if (mc.getPlayer(player2.name).isOP) {
+                            if (mc.getPlayer(player2.name).isOP()) {
                                 let newdimlist = dimlist
                                 newdimlist.splice(data2[0], 1)
                                 //let newdimlist=dimlist.concat({ "name": data2[0], "seed": parseInt(data2[2]), "type": ["Overworld","Nether","TheEnd","Flat","Void"][data2[1]] })
@@ -81,7 +81,7 @@ mc.listen('onServerStarted', () => {
                     }
                 default:
                     {
-                        if (mc.getPlayer(player.name).isOP) {
+                        if (mc.getPlayer(player.name).isOP()) {
                             let dimnamelist = []
                             dimlist.forEach((value, index) => {dimnamelist= dimnamelist.concat(value.name) })
                             mc.getPlayer(player.name).runcmd(`tpdim @s ~~~ ${convertToSnakeCase(dimnamelist[id - 2])}`)
